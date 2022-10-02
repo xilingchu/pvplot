@@ -17,7 +17,7 @@ class pvScript(ABC):
         pass
 
     @abstractmethod
-    def _render(self):
+    def _view(self):
         pass
         
     @abstractmethod
