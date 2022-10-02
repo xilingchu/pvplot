@@ -78,6 +78,9 @@ class contour(pvScript):
         self.renderView1.CameraViewUp = ccinfo.CameraViewUp
         self.renderView1.CameraParallelScale = ccinfo.CameraParallelScale
 
+        # change interaction mode for render view
+        self.renderView1.InteractionMode = '3D'
+
         # save screenshot
         SaveScreenshot(ofile, self.renderView1, ImageResolution=[1216, 826],
             OverrideColorPalette='WhiteBackground')
