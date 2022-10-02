@@ -50,7 +50,7 @@ class contour(pvScript):
         self.qcontourDisplay = Show(self.qcontour, self.renderView1, 'GeometryRepresentation')
         
         # Set the scalar color
-        ColorBy(self.boundDisplay, ('CELLS', 'SkinFriction', 'X'))
+        ColorBy(self.boundDisplay, ('CELLS', 'SkinFriction', 'SkinFrictionX'))
         
         # show color bar/color legend
         self.boundDisplay.SetScalarBarVisibility(self.renderView1, True)
@@ -62,8 +62,8 @@ class contour(pvScript):
         frictionPWF = GetOpacityTransferFunction('SkinFriction')
 
         # Rescale transfer function
-        frictionLUT.RescaleTransferFunction(-5000, 5000)
-        frictionPWF.RescaleTransferFunction(-5000, 5000)
+        frictionLUT.RescaleTransferFunction(0, 30)
+        frictionPWF.RescaleTransferFunction(0, 30)
 
     def _output(self, ofile, pvcc):
         # get layout
