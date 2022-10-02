@@ -1,15 +1,6 @@
 from xml.etree import ElementTree as ET
 from pathlib import Path
 
-def loadpvcc(pvcc):
-    pvcc = Path(pvcc).expanduser().resolve()
-    if not pvcc.exists():
-        raise Exception('The paraview camera settings is not exists.')
-    
-    etree = ET.parse(pvcc)
-    pvcc   = etree.getroot()
-    config = pvcc.find('Proxy')
-    
 class infopvcc(object):
     def __init__(self, pvcc):
         pvcc = Path(pvcc).expanduser().resolve()
