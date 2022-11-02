@@ -9,9 +9,15 @@ This repo will also contains a document to introduce the basic usage of PVPLOT.
 
 ## Usage
 You can use these scripts through Paraview client or use pvpython on terminal.
-If you want to use it in Paraview client, you should firstly copy the **pvscripts.py**, **utils.py**, and **loadpvcc.py** to the library in the installation directory,
+If you want to use it in Paraview client, you should firstly copy the **pvplot**, and **filter** to the library in the installation directory,
 ```bash
-cp pvscripts.py utils.py loadpvcc.py [path-to-paraview]/lib/[python]/site-packages
+cp -r pvplot [path-to-paraview]/lib/[python]/site-packages
+cp -r filter [path-to-paraview]/lib/[python]/site-packages
+```
+or
+```bash
+ln -rs pvplot [path-to-paraview]/lib/[python]/site-packages
+ln -rs filter [path-to-paraview]/lib/[python]/site-packages
 ```
 and then you can import the scripts in Paraview client.
 
